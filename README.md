@@ -105,16 +105,6 @@ If you watch your screen, having executed the above command, you should be able 
 
 ### **Reporting**
 
-One of codeceptJS's numerous capabilities is the ability to do flexible reporting.  One of these reporting mechanisms is integration with Allure, an open source reporting dashboard that provided graphical, easy to use reports.  To view reports using allure, execute the following from your terminal:
+One of codeceptJS's numerous capabilities is the ability to do flexible reporting.  This project will produce XML reports for each test case, it will produce test results in JSON, and it will also produce an HTML report.  The XML reports are located in the '**output**' directory within the project, and the HTML report (see example below) can be found in the '**mochawesome-report**' directory.
 
-```
-allure serve output
-```
-
-Having done so, you should see allure open in your default web browser, as seen below.  Feel free to navigate around Allure's section - there are too many great features to cover here.
-
-![](./assets/allure.png?raw=true "Title")
-
-In addition to allure, this project will also produce XML reports for each test case, and also produces an HTML report.  The XML reports are located in the '**output**' directory within the project, and the HTML report (see example below) can be found in the '**mochawesome-report**' directory.
-
-![](./assets/mochawesome_report.png?raw=true "Title")
+![](./assets/mochawesome.png?raw=true "Title")
