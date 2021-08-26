@@ -88,3 +88,17 @@ Then execute the following:
 ```
 npm i
 ```
+
+### **Executing Tests**
+
+If you have successfully executed all of the previous steps, you should now be able to execute tests by issuing this command in terminal:
+
+```
+npm run web
+```
+
+Note that you must execute this from within the '**codeceptjs-web-POC**' directory.
+
+If you watch your screen, having executed the above command, you should be able to see a web browser spin up, and you should be able to watch the tests execute in real time.  When the tests complete running, you should see an execution summary in your terminal:
+
+![](./assets/summary.png?raw=true "Title")
