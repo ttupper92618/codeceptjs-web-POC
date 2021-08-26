@@ -102,3 +102,19 @@ Note that you must execute this from within the '**codeceptjs-web-POC**' directo
 If you watch your screen, having executed the above command, you should be able to see a web browser spin up, and you should be able to watch the tests execute in real time.  When the tests complete running, you should see an execution summary in your terminal:
 
 ![](./assets/summary.png?raw=true "Title")
+
+### **Reporting**
+
+One of codeceptJS's numerous capabilities is the ability to do flexible reporting.  One of these reporting mechanisms is integration with Allure, an open source reporting dashboard that provided graphical, easy to use reports.  To view reports using allure, execute the following from your terminal:
+
+```
+allure serve output
+```
+
+Having done so, you should see allure open in your default web browser, as seen below.  Feel free to navigate around Allure's section - there are too many great features to cover here.
+
+![](./assets/allure.png?raw=true "Title")
+
+In addition to allure, this project will also produce XML reports for each test case, and also produces an HTML report.  The XML reports are located in the '**output**' directory within the project, and the HTML report (see example below) can be found in the '**mochawesome-report**' directory.
+
+![](./assets/mochawesome_report.png?raw=true "Title")
