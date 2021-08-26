@@ -1,4 +1,4 @@
-# **codeceptjs-native-POC**
+# **codeceptjs-web-POC**
 This project is a proof of concept implementation of using codeceptJS for performing functional (UI) testing of web apps using Puppeteer.
 
 CodeceptJS (https://codecept.io/) is a platform agnostic testing framework that can automate testing against web apps, hybrid apps, and native mobile apps. It can also execute tests against simulators, real devices, and via cloud based device providers such as SauceLabs, Browserstack, and Perfecto.  
@@ -64,3 +64,27 @@ npm -v
 ```
 
 Having done this, you should see version strings for each in response to the command entered.
+
+### **Clone the Repo**
+
+Having completed all of the foregoing steps, it is time to clone the repo.  To do so, type the following in terminal:
+
+```
+git clone https://github.com/ttupper92618/codeceptjs-web-POC.git
+```
+
+**Note** that you should only do this from the location where you want this project to be installed.  
+
+### **Install Dependencies**
+
+This project has a number of dependencies.  You must install these before you can execute tests.  To do so, first CD into the cloned repo:
+
+```
+cd codeceptjs-web-POC
+```
+
+Then execute the following:
+
+```
+npm i
+```
