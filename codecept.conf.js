@@ -1,10 +1,11 @@
 exports.config = {
   output: './output',
   helpers: {
-    Puppeteer: {
+    Playwright: {
       url: 'https://www.saucedemo.com/',
       show: true,
-      windowSize: '1200x600'
+      windowSize: '1200x600',
+      browser: 'webkit'
     },
     Mochawesome: {
       uniqueScreenshotNames: true
