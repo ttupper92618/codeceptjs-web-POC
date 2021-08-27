@@ -1,5 +1,5 @@
 # **codeceptjs-web-POC**
-This project is a proof of concept implementation of using codeceptJS for performing functional (UI) testing of web apps using Puppeteer.
+This project is a proof of concept implementation of using codeceptJS for performing functional (UI) testing of web apps using Playwright.
 
 CodeceptJS (https://codecept.io/) is a platform agnostic testing framework that can automate testing against web apps, hybrid apps, and native mobile apps. It can also execute tests against simulators, real devices, and via cloud based device providers such as SauceLabs, Browserstack, and Perfecto.  
 
