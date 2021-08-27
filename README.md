@@ -105,6 +105,33 @@ If you watch your screen, having executed the above command, you should be able 
 
 ### **Reporting**
 
-One of codeceptJS's numerous capabilities is the ability to do flexible reporting.  This project will produce XML reports for each test case, it will produce test results in JSON, and it will also produce an HTML report.  The XML reports are located in the '**output**' directory within the project, and the HTML report (see example below) can be found in the '**mochawesome-report**' directory.
+One of codeceptJS's numerous capabilities is the ability to do flexible reporting.  One of these reporting mechanisms is integration with Allure, an open source reporting dashboard that provided graphical, easy to use reports.  To view reports using allure, execute the following from your terminal:
+
+```
+allure serve output
+```
+
+Having done so, you should see allure open in your default web browser, as seen below.  Feel free to navigate around Allure's section - there are too many great features to cover here.
+
+![](./assets/allure.png?raw=true "Title")
+
+In addition to allure, this project will also produce XML reports for each test case, and also produces an HTML report.  The XML reports are located in the '**output**' directory within the project, and the HTML report (see example below) can be found in the '**mochawesome-report**' directory.
 
 ![](./assets/mochawesome.png?raw=true "Title")
+
+### **Visual Testing**
+
+This project enables visual testing through resemble.js.  Resemble.js is an image comparison tool that can compare two images and produce a diff image that highlights the differences between the two images. It can be configured to ignore differences under a given threshold, and when tests fail, the base, capture, and diff images are provided through this project's reporting processes.  You can include visual testing in any test case simply by taking a screen capture and then comparing it to a base image, like so:
+
+```
+I.saveScreenshot('login_view_web.png');
+I.seeVisualDiff('login_view_web.png', {tolerance: 0});
+```
+
+To see how this works, one of the sample tests in this project will intentionally fail.  Based on the following base image, it will capture the login view, and produce a diff as seen below:
+
+| Base Image            | Screen Capture        | Diff                  |
+| --------------------- | --------------------- | --------------------- |
+| <img src="./assets/base.png" width="250"/> | <img src="./assets/rendered.png" width="250"/> | <img src="./assets/diff.png" width="250"/> |
+
+Notice how the diff image highlights (in magenta) the areas that differ between the base and capture images.

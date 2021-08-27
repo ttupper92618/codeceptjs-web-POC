@@ -5,12 +5,45 @@ exports.config = {
       url: 'https://www.saucedemo.com/',
       show: true,
       windowSize: '1200x600'
+    },
+    Mochawesome: {
+      uniqueScreenshotNames: true
+    },
+    ResembleHelper : {
+      require: 'codeceptjs-resemblehelper',
+      baseFolder: './screenshots/base/',
+      diffFolder: './screenshots/diff/',
+      prepareBaseImage: false
     }
   },
   include: {
     I: './steps_file.js'
   },
-  mocha: {},
+  mocha: {
+    reporterOptions: {
+      'codeceptjs-cli-reporter': {
+        stdout: '-',
+        options: {
+          verbose: true,
+          steps: true
+        }
+      },
+      mochawesome: {
+        stdout: './output/console.log',
+        options: {
+          reportDir: './output',
+          reportFilename: 'report'
+        }
+      },
+      'mocha-junit-reporter': {
+        stdout: './output/console.log',
+        options: {
+          mochaFile: './output/result.xml',
+          attachments: true
+        }
+      }
+    }
+  },
   bootstrap: null,
   teardown: null,
   hooks: [],
@@ -21,6 +54,10 @@ exports.config = {
   plugins: {
     screenshotOnFail: {
       enabled: true
+    },
+    allure: {
+      enabled: true,
+      enableScreenshotDiffPlugin: true
     },
     pauseOnFail: {},
     retryFailedStep: {

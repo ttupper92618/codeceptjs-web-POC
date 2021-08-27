@@ -51,4 +51,5 @@ Then('I should be able to see product details', () => {
 
 Then('I should not see a visual difference between login and the login designs', () => {
   I.saveScreenshot('login_view_web.png');
+    I.seeVisualDiff('login_view_web.png', {tolerance: 0});
 });
